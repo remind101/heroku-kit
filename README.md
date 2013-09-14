@@ -1,11 +1,12 @@
 # Heroku Kit
 
-A collection of ruby gems that we include across all of our apps that run on
-heroku.
+An opinionated collection of middleware for Ruby apps running on Heroku.
 
-* formatted-metrics for logging metrics to STDOUT.
-* collective-metrics for collecting metrics from services.
-* request\_id for tracing request\_id's through systems.
+* [rack-timeout](https://github.com/kch/rack-timeout) for timing out long
+  running requests.
+* [formatted-metrics](https://github.com/remind101/formatted-metrics) for logging metrics to STDOUT.
+* [collective](https://github.com/remind101/collective-metrics) for collecting metrics from services.
+* [request\_id](https://github.com/remind101/request_id) for tracing request\_id's through systems.
 
 ## Installation
 
