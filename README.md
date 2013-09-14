@@ -13,7 +13,7 @@ An opinionated collection of middleware for Ruby apps running on Heroku.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'remind101-kit', github: 'remind101/heroku-kit'
+gem 'heroku-kit', github: 'remind101/heroku-kit'
 ```
 
 ## Usage
