@@ -2,6 +2,7 @@ require 'formatted-metrics'
 require 'collective-metrics'
 require 'rack-timeout'
 require 'request_id'
+require 'rails_12factor' if (ENV['RAILS_ENV'] || ENV['RACK_ENV']) == 'production'
 
 begin
   require 'sidekiq'
