@@ -6,7 +6,7 @@ An opinionated collection of middleware, utilities and best practives for
 * [rack-timeout](https://github.com/kch/rack-timeout) for timing out long
   running requests.
 * [formatted-metrics](https://github.com/remind101/formatted-metrics) for logging metrics to STDOUT
-  form consumption by [l2met](https://github.com/ryandotsmith/l2met).
+  for consumption by [l2met](https://github.com/ryandotsmith/l2met).
 * [collective](https://github.com/remind101/collective) for collecting metrics from services.
 * [request\_id](https://github.com/remind101/request_id) for tracing request\_id's through systems.
 * [rails\_12factor](https://github.com/remind101/rails_12factor) for enabling
