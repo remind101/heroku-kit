@@ -3,22 +3,15 @@ require 'logger'
 module Heroku
   module Kit
     module Logging
-      module Formatter
+      class Formatter < ::Logger::Formatter
+        def initialize(*args)
+          super
+          extend RequestId
+        end
 
         def call(severity, timestamp, progname, msg)
-          if request_id
-            "request_id=#{request_id} #{super}"
-          else
-            super
-          end
+          "msg\n"
         end
-
-      private
-
-        def request_id
-          RequestId.request_id
-        end
-
       end
     end
   end
