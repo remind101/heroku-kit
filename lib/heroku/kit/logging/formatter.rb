@@ -10,7 +10,7 @@ module Heroku
         end
 
         def call(severity, timestamp, progname, msg)
-          "msg\n"
+          "#{msg}\n"
         end
       end
     end

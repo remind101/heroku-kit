@@ -1,5 +1,5 @@
 require 'bundler/setup'
-Bundler.require :default, :test
+Bundler.require :default
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
