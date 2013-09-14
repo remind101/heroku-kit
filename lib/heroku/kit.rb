@@ -18,5 +18,9 @@ module Heroku
     module Logging
       autoload :Formatter, 'heroku/kit/logging/formatter'
     end
+
+    def self.setup_logger(logger)
+      logger.formatter.extend Formatter
+    end
   end
 end

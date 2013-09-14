@@ -1,16 +1,18 @@
 module Heroku
   module Kit
     class Railtie < ::Rails::Railtie
+      require 'rails_12factor' if ::Rails.env.production?
+
       initializer 'heroku-kit.middleware' do |app|
         app.middleware.insert_after Rack::Timeout, Rack::RequestId
         app.middleware.insert_after Rack::RequestId, Rack::Instrumentation
       end
 
-      config.after_initialize do
+      config.before_initialize do
         begin
-          ::Rails.logger.formatter.extend Heroku::Kit::Logging::Formatter
+          Heroku::Kit.setup_logger(::Rails.logger)
         rescue
-          # ActiveSupport::BufferedLogger doesn't respond to formatter.
+          # Nothing to see here.
         end
       end
     end

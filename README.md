@@ -1,12 +1,15 @@
 # Heroku Kit
 
-An opinionated collection of middleware for Ruby apps running on Heroku.
+An opinionated collection of middleware, utilities and best practives for
+[12factor](http://12factor.net) Ruby apps running on Heroku.
 
 * [rack-timeout](https://github.com/kch/rack-timeout) for timing out long
   running requests.
 * [formatted-metrics](https://github.com/remind101/formatted-metrics) for logging metrics to STDOUT.
-* [collective](https://github.com/remind101/collective-metrics) for collecting metrics from services.
+* [collective](https://github.com/remind101/collective) for collecting metrics from services.
 * [request\_id](https://github.com/remind101/request_id) for tracing request\_id's through systems.
+* [rails\_12factor](https://github.com/remind101/rails_12factor) for enabling
+  STDOUT logging and static asset serving in production.
 
 ## Installation
 
