@@ -2,6 +2,7 @@ ENV['RAILS_ENV'] ||= 'production'
 
 require 'bundler/setup'
 require 'action_controller/railtie'
+require 'sidekiq'
 require 'heroku-kit'
 
 App ||= Class.new(Rails::Application) {

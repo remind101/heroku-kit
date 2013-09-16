@@ -9,12 +9,12 @@ Sidekiq.configure_server do |config|
       chain.add Sidekiq::Middleware::Client::RequestId
     end
   end
-end if Sidekiq.respond_to?(:configure_server)
+end
 
 Sidekiq.configure_client do |config|
   config.client_middleware do |chain|
     chain.add Sidekiq::Middleware::Client::RequestId
   end
-end if Sidekiq.respond_to?(:configure_client)
+end
 
-Sidekiq.logger.formatter = Heroku::Kit::Sidekiq::Logger.new if Sidekiq.respond_to?(:logger)
+Sidekiq.logger = Heroku::Kit::Sidekiq::Logger.new
