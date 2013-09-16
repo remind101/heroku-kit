@@ -29,5 +29,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec'
 
   spec.add_development_dependency 'sidekiq'
-  spec.add_development_dependency 'rails', '>= 3.2'
+  spec.add_development_dependency 'rails', ['>= 3.2', '< 4.0']
 end

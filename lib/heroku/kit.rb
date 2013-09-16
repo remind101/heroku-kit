@@ -16,9 +16,5 @@ module Heroku
       autoload :RequestId, 'heroku/kit/logging/request_id'
       autoload :Formatter, 'heroku/kit/logging/formatter'
     end
-
-    def self.setup_logger(logger)
-      logger.formatter.extend Logging::RequestId
-    end
   end
 end
