@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rack-timeout',       '~> 0.0.4'
   spec.add_dependency 'formatted-metrics',  '~> 1.0'
   spec.add_dependency 'collective-metrics', '~> 0.1'
-  spec.add_dependency 'request_id',         '~> 0.1'
+  spec.add_dependency 'request_id',         ['>= 0.1.5', '< 1.0']
   spec.add_dependency 'rails_12factor'
 
   spec.add_development_dependency 'bundler', '~> 1.3'
