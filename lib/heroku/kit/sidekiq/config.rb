@@ -17,4 +17,4 @@ Sidekiq.configure_client do |config|
   end
 end
 
-Sidekiq.logger = Heroku::Kit::Sidekiq::Logger.new
+Sidekiq.logger.formatter = Heroku::Kit::Sidekiq::Formatter.new

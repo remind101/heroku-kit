@@ -1,7 +1,7 @@
 module Heroku
   module Kit
     module Sidekiq
-      autoload :Logger, 'heroku/kit/sidekiq/logger'
+      autoload :Formatter, 'heroku/kit/sidekiq/formatter'
     end
   end
 end

@@ -17,9 +17,9 @@ describe Sidekiq do
     it { should include Sidekiq::Middleware::Client::RequestId }
   end
 
-  describe 'logger' do
-    subject(:logger) { Sidekiq.logger }
+  describe 'logger formatter' do
+    subject(:formatter) { Sidekiq.logger.formatter }
 
-    it { should be_a Heroku::Kit::Sidekiq::Logger }
+    it { should be_a Heroku::Kit::Sidekiq::Formatter }
   end
 end
