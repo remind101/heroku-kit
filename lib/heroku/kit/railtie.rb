@@ -1,3 +1,10 @@
+class Logger::SimpleFormatter
+  def initialize(*args)
+    super
+    extend Heroku::Kit::Logging::RequestId
+  end
+end
+
 module Heroku
   module Kit
     class Railtie < ::Rails::Railtie
